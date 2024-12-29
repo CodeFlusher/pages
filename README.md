@@ -1,8 +1,14 @@
-# Nuxt Minimal Starter
+# My personal web page
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+Build on NuxtJS with Tailwind css
+
+## About
+
+A web site that contains a info on me, showcasing my works and my skills!
 
 ## Setup
+
+I prefer npm, but probably other pm should work
 
 Make sure to install dependencies:
 
@@ -71,5 +77,3 @@ yarn preview
 # bun
 bun run preview
 ```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
