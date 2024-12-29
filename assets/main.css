@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+    @apply dark:bg-neutral-950 bg-zinc-100;
+    @apply text-neutral-800 dark:text-neutral-400;
+    @apply transition duration-500;
+}
+
+.pfp-clip-path{
+    clip-path: polygon(0% 100%,75% 100%,100% 0%,  0% 0%);
+}

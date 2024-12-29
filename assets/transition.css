@@ -1,0 +1,23 @@
+.card-left-enter-active, .card-left-leave-active, .card-bottom-enter-active, .card-bottom-leave-active {
+    transition: all 1s cubic-bezier(0.25, 1,0.25,1);
+}
+
+.card-left-enter-from, .card-left-leave-to {
+    opacity: 0;
+    transform: translateX(-5rem);
+}
+
+.card-left-enter-to, .card-left-leave-from {
+    opacity: 100%;
+    transform: translateX(0);
+}
+
+.card-bottom-enter-from, .card-bottom-leave-to {
+    opacity: 0;
+    transform: translateY(5rem);
+}
+
+.card-bottom-enter-to, .card-bottom-leave-from {
+    opacity: 100%;
+    transform: translateY(0);
+}
