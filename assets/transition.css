@@ -1,7 +1,10 @@
-.card-left-enter-active, .card-left-leave-active, .card-bottom-enter-active, .card-bottom-leave-active {
+.card-left-enter-active, .card-left-leave-active, .card-bottom-enter-active, .card-bottom-leave-active{
     transition: all 1s cubic-bezier(0.25, 1,0.25,1);
 }
 
+.card-opacity-enter-active, .card-opacity-leave-active{
+    transition: all 1s cubic-bezier(0.25, 1,0.25,1);
+}
 .card-left-enter-from, .card-left-leave-to {
     opacity: 0;
     transform: translateX(-5rem);
@@ -20,4 +23,14 @@
 .card-bottom-enter-to, .card-bottom-leave-from {
     opacity: 100%;
     transform: translateY(0);
+}
+
+.card-opacity-enter-from, .card-opacity-leave-to {
+    opacity: 0;
+
+}
+
+.card-opacity-enter-to, .card-opacity-leave-from {
+    opacity: 100%;
+
 }

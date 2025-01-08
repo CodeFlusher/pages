@@ -1,41 +1,34 @@
 <template>
 
   <SiteTransitionBottom delay="500ms">
-    <div class="flex flex-col gap-4" v-show="visibleTitle">
-      <KitItemPicker class="mt-auto mx-auto" v-model:item="currentItem" v-model:progress="time" v-model:items="stacks.length"/>
-
-      <div class="h-full w-full flex" ref="titleRef" >
-        <div class="absolute flex h-full bg-opacity-0 hover:bg-opacity-10 bg-zinc-500 p-12 transition duration-200 z-10 max-lg:hidden" @click="decrement(true)">
-          <ArrowLeftIcon class="size-12 my-auto" />
-        </div>
-        <div class="w-full backdrop-blur-0 flex">
+    <div class="flex flex-col gap-4 h-fit" v-show="visibleTitle">
+      <div class="absolute left-0 p-12 h-96 flex z-10 max-lg:hidden cursor-pointer" @click="decrement">
+        <ArrowLeftIcon class="size-10 dark:text-neutral-300 dark:hover:text-white trantsition-colors m-auto"></ArrowLeftIcon>
+      </div>
+      <div class="h-fit flex z-0" ref="titleRef" >
+        <div class="h-96">
           <SiteTransitionCycle delay="0ms" class="" v-for="(item, index) in stacks" >
-            <div v-if="index === currentItem" class="lg:flex w-full h-full my-auto absolute px-4 lg:p-24">
-              <div class="w-1/2 max-lg:mx-auto m-auto backdrop-blur-0" @wheel="wheel">
-                  <NuxtImg :src="item.image" class="min-w-full max-w-full aspect-square z-0" @click="openLink(item.url)"/>
-
-                  <div class="absolute w-full aspect-square -translate-y-full blur-3xl opacity-25 rounded-full -z-10" :style="{
-                    background: `#${item.color}`
-                  }">
-
-                  </div>
+            <div v-if="index === currentItem" class="grid max-lg:grid-rows-2 grid-rows-1 lg:grid-cols-2 h-96 w-full absolute my-auto p-4 lg:px-24 " @wheel="wheel">
+              <div class="flex">
+                <div class="backdrop-blur-0 aspect-square h-full max-lg:mx-auto ml-auto cursor-pointer" @click="openLink(item.url)">
+                  <NuxtImg :src="item.image" class="h-full aspect-square"></NuxtImg>
+                  <div class="aspect-square absolute h-full rounded-full blur-3xl opacity-20 -translate-y-full" :style="{background: `#${item.color}`}"/>
+                </div>
               </div>
-              <div class="lg:w-1/2 my-auto" @wheel="wheel">
-                <h2 class="text-4xl lg:text-8xl max-lg:text-center text-transparent bg-clip-text bg-gradient-to-r font-extrabold" :class="item.additional">
-                  {{item.name}}
-                </h2>
-                <h3 class="max-lg:text-center text-2xl lg:text-4xl font-bold">{{item.description}}</h3>
+              <div class="flex">
+                <div class="items-center text-center justify-items-center max-lg:mx-auto lg:my-auto lg:mr-auto">
+                  <h3 class="bg-clip-text text-transparent bg-gradient-to-r font-extrabold text-4xl lg:text-8xl" :class="item.additional">{{item.name}}</h3>
+                  <h4 class="text-2xl">{{item.description}}</h4>
+                </div>
               </div>
-
             </div>
           </SiteTransitionCycle>
-
         </div>
-        <div class="absolute flex h-full bg-opacity-0 hover:bg-opacity-10 bg-zinc-500 p-12 z-10 transition duration-200 right-0 max-lg:hidden" @click="increment(true)">
-          <ArrowRightIcon class="size-12 my-auto" />
-        </div>
-
       </div>
+      <div class="absolute right-0 p-12 h-96 flex z-10 max-lg:hidden cursor-pointer" @click="increment">
+        <ArrowRightIcon class="size-10 dark:text-neutral-300 dark:hover:text-white trantsition-colors m-auto"></ArrowRightIcon>
+      </div>
+      <KitItemPicker class="mx-auto" v-model:item="currentItem" v-model:progress="time" v-model:items="stacks.length"/>
 
     </div>
   </SiteTransitionBottom>
@@ -43,16 +36,15 @@
 
 <script setup lang="ts">
 
-import Nuxt from '~/public/icons/nuxt.svg'
-import TailwindCSS from '~/public/icons/tailwindcss.svg'
-import JavaIcon from 'public/icons/javaicon.svg'
+import Nuxt from 'public/images/icons/nuxt.svg'
+import TailwindCSS from 'public/images/icons/tailwindcss.svg'
+import JavaIcon from 'public/images/icons/javaicon.svg'
 
 import {useWindowScroll} from "@vueuse/core";
 import {openLink} from "~/utils/utils";
 
 import {ArrowLeftIcon, ArrowRightIcon} from "@heroicons/vue/24/solid";
 import type {StackCard} from "~/types/frontend.cards";
-import {before} from "node:test";
 
 const currentItem = ref<number>(0)
 const time = ref<number>(50)

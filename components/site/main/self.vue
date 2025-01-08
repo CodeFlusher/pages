@@ -1,6 +1,6 @@
 <template>
 
-  <div class="w-fit m-auto flex flex-col gap-2 z-0 p-12">
+  <div class="w-fit m-auto flex flex-col gap-2 z-0 p-8">
     <SiteTransitionLeft delay="0ms">
 
       <span class="opacity-0 text-4xl font-sans text-neutral-900 dark:text-neutral-200">
@@ -10,7 +10,7 @@
     </SiteTransitionLeft>
 
     <SiteTransitionLeft delay="100ms">
-      <h1 class="font-extrabold max-md:text-center text-5xl md:text-8xl font-sans text-transparent bg-clip-text bg-gradient-to-r from-green-500 to-green-700">
+      <h1 class="font-extrabold max-md:text-center text-5xl md:text-8xl font-sans text-transparent bg-clip-text bg-gradient-to-r from-green-500 to-green-400 dark:to-green-700">
         CodeFlusher
       </h1>
     </SiteTransitionLeft>
@@ -35,7 +35,7 @@
       </span>
 
     </SiteTransitionLeft>
-    <ul class="translate-x-2 text-4xl font-sans flex flex-col gap-2 mb-4">
+    <ul class=" text-4xl font-sans flex flex-col gap-2 mb-4">
       <SiteTransitionLeft :delay="`${400 + index*100}ms`" v-for="(item, index) in activities">
         <li class="flex">
           <div class="size-2 dark:bg-white bg-black my-auto rounded-full"/>

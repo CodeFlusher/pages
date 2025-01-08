@@ -9,3 +9,7 @@ export const openLink = (link: string)=>{
         window.open(link);
     }
 }
+
+export const randomInRange = (max: number, min: number) => {
+    return Math.floor(Math.random() * (max - min)) + min;
+}

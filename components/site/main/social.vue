@@ -11,7 +11,7 @@
 
       <div v-for="(item, index) in social">
         <SiteTransitionBottom :delay="`${800+index*100}ms`">
-          <div class="flex p-2 gap-2 w-full"  @mouseenter="item.active=true" @mouseleave="item.active=false">
+          <div class="flex p-2 gap-2 w-full cursor-pointer"  @mouseenter="item.active=true" @mouseleave="item.active=false">
             <NuxtImg class="aspect-square object-cover size-12 lg:size-24 my-auto" :src="item.image" @click="openLink(item.url)"></NuxtImg>
             <div class="absolute blur-2xl aspect-square transition-all duration-200 size-12 lg:size-24 -z-10" :class="item.active ? 'opacity-50' :'opacity-0'" :style="{background: `#${item.color}`}"></div>
             <div class="flex flex-col gap-2 w-full">
@@ -36,9 +36,9 @@
 
 <script setup lang="ts">
 
-import Telegram from '~/public/icons/telegram.svg'
-import Discord from '~/public/icons/discord.svg'
-import YouTube from '~/public/icons/youtube.svg'
+import Telegram from 'public/images/icons/telegram.svg'
+import Discord from 'public/images/icons/discord.svg'
+import YouTube from 'public/images/icons/youtube.svg'
 import type {SocialCard} from "~/types/frontend.cards";
 
 import {openLink, copyToClipborard} from "~/utils/utils";
@@ -47,8 +47,8 @@ const social = ref<SocialCard[]>([
   {
     name: "Telegram",
     description: "My work telegram account",
-    url: "https://t.me/sturwaliero",
-    userId: "@sturwaliero",
+    url: "https://t.me/codefwork",
+    userId: "@codefwork",
     image: Telegram,
     color: "0088CC",
     active: false,

@@ -16,3 +16,9 @@ export type StackCard = {
     color: string,
     additional: string
 }
+
+export type PawRow = {
+    x: number,
+    y: number,
+    rotation: number,
+}
