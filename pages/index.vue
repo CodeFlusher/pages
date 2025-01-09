@@ -3,10 +3,11 @@
     <div class="fixed top-2 w-screen flex z-[1000]">
       <div class="mx-auto rounded-full border-2 border-red-500 backdrop-blur-sm backdrop-brightness-90 bg-red-500/20 p-4 px-12 text-2xl justify-items-center">
         
-        <h1 class="font-bold ">
+        <h1 class="font-bold max-lg:hidden">
           THIS SITE IS CURRENTLY <b class="font-extrabold">WIP</b>
         </h1>
-        <h2>
+        <b class="font-extrabold lg:hidden">WIP</b>
+        <h2 class="max-lg:hidden">
           That means that everything is a thing to change and may not work!
         </h2>
     

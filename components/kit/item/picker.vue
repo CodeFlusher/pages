@@ -21,7 +21,7 @@
   const switchItem = (index: number) => {
     console.log(index)
     activeItem.value=index-1;
-    progress.value = 1
+    progress.value = 50
   }
 
   const activeItem = defineModel<number>('item')
