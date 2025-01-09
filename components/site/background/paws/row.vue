@@ -1,7 +1,7 @@
 <template>
   <div class="absolute h-screen origin-top">
-    <div v-for="item in paws" class="transition duration-500" :class="item < paw && item > paw-visiblePaws ? 'opacity-100' : 'opacity-0'">
-      <img :src="PawIcon" class="size-6 rotate-180 text-white" :class="item%2==0 ? `translate-x-2` : `-translate-x-2`" ></img>
+    <div v-for="item in paws" class="transition duration-1000" :class="item < paw && item > paw-visiblePaws ? 'opacity-100' : 'opacity-0'">
+      <img :src="PawIcon" class="size-6 rotate-180 text-white" :class="item%2==0 ? `translate-x-2` : `-translate-x-2`"/>
     </div>
   </div>
 </template>

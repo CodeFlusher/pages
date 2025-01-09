@@ -5,9 +5,14 @@
 .card-opacity-enter-active, .card-opacity-leave-active{
     transition: all 1s cubic-bezier(0.25, 1,0.25,1);
 }
-.card-left-enter-from, .card-left-leave-to {
+.card-left-enter-from {
     opacity: 0;
     transform: translateX(-5rem);
+}
+
+.card-left-leave-to{
+    opacity: 0;
+    transform: translateX(5rem);
 }
 
 .card-left-enter-to, .card-left-leave-from {
@@ -15,9 +20,14 @@
     transform: translateX(0);
 }
 
-.card-bottom-enter-from, .card-bottom-leave-to {
+.card-bottom-enter-from {
     opacity: 0;
     transform: translateY(5rem);
+}
+
+.card-bottom-leave-to{
+    opacity: 0;
+    transform: translateY(-5rem);
 }
 
 .card-bottom-enter-to, .card-bottom-leave-from {

@@ -1,5 +1,5 @@
 <template>
-  <div class="w-screen h-screen overflow-hidden" ref="pawsRoot">
+  <div class="w-full h-screen overflow-hidden" ref="pawsRoot">
     <SiteBackgroundPawsRow
         :paws="amountOfPaws"
         :style="{

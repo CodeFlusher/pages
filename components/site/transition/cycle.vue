@@ -1,6 +1,6 @@
 <template>
-    <transition mode="out-in" name="card-left" appear :class="state ? 'opacity-100' : 'opacity-0'" @enter="state=true" @leave="state=false" :style="`transition-delay: ${delay}`">
-      <slot />
+    <transition name="card-left" appear :class="state ? 'opacity-100' : 'opacity-0'" @enter="state=true" @leave="state=false" :style="`transition-delay: ${delay}`">
+      <slot/>
     </transition>
 </template>
 

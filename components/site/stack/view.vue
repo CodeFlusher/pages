@@ -2,21 +2,21 @@
 
   <SiteTransitionBottom delay="500ms">
     <div class="flex flex-col gap-4 h-fit" v-show="visibleTitle">
-      <div class="absolute left-0 p-12 h-96 flex z-10 max-lg:hidden cursor-pointer" @click="decrement">
+      <div class="absolute left-0 p-4 lg:p-12 h-96 flex z-10 cursor-pointer" @click="decrement">
         <ArrowLeftIcon class="size-10 dark:text-neutral-300 dark:hover:text-white trantsition-colors m-auto"></ArrowLeftIcon>
       </div>
       <div class="h-fit flex z-0" ref="titleRef" >
-        <div class="h-96">
+        <div class="h-96 absolute w-full overflow-x-hidden">
           <SiteTransitionCycle delay="0ms" class="" v-for="(item, index) in stacks" >
-            <div v-if="index === currentItem" class="grid max-lg:grid-rows-2 grid-rows-1 lg:grid-cols-2 h-96 w-full absolute my-auto p-4 lg:px-24 " @wheel="wheel">
+            <div v-if="index === currentItem" class="grid max-lg:grid-rows-2 grid-rows-1 lg:grid-cols-2 w-full h-96 absolute my-auto p-4 lg:px-24" @wheel="wheel">
               <div class="flex">
                 <div class="backdrop-blur-0 aspect-square h-full max-lg:mx-auto ml-auto cursor-pointer" @click="openLink(item.url)">
                   <NuxtImg :src="item.image" class="h-full aspect-square"></NuxtImg>
-                  <div class="aspect-square absolute h-full rounded-full blur-3xl opacity-20 -translate-y-full" :style="{background: `#${item.color}`}"/>
+                  <div class="aspect-square absolute h-[50%] rounded-full blur-3xl opacity-20 -translate-y-[150%] translate-x-1/2 " :style="{background: `#${item.color}`}"/>
                 </div>
               </div>
               <div class="flex">
-                <div class="items-center text-center justify-items-center max-lg:mx-auto lg:my-auto lg:mr-auto">
+                <div class="max-lg:items-center max-lg:text-center justify-items-center max-lg:mx-auto lg:my-auto lg:mr-auto flex flex-col">
                   <h3 class="bg-clip-text text-transparent bg-gradient-to-r font-extrabold text-4xl lg:text-8xl" :class="item.additional">{{item.name}}</h3>
                   <h4 class="text-2xl">{{item.description}}</h4>
                 </div>
@@ -25,10 +25,10 @@
           </SiteTransitionCycle>
         </div>
       </div>
-      <div class="absolute right-0 p-12 h-96 flex z-10 max-lg:hidden cursor-pointer" @click="increment">
+      <div class="absolute right-0 p-4 lg:p-12 h-96 flex z-10 cursor-pointer" @click="increment">
         <ArrowRightIcon class="size-10 dark:text-neutral-300 dark:hover:text-white trantsition-colors m-auto"></ArrowRightIcon>
       </div>
-      <KitItemPicker class="mx-auto" v-model:item="currentItem" v-model:progress="time" v-model:items="stacks.length"/>
+      <KitItemPicker class="mt-96 mx-auto" v-model:item="currentItem" v-model:progress="time" v-model:items="stacks.length"/>
 
     </div>
   </SiteTransitionBottom>
