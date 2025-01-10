@@ -26,14 +26,14 @@
   </div>
   
   <div class="h-screen w-full overflow-hidden">
-    <div ref="langsTitleRef">
-      <SiteStackTitle :visible="langsTitle" class="h-fit" title="Languages and frameworks"/>
+    <div>
+      <SiteStackTitle class="h-fit" title="Languages and frameworks"/>
     </div>
-    <div class="h-96 mb-12" ref="stacksRef">
-      <SiteStackView :visible="visibleStacks"/>
+    <div class="h-96 mb-12">
+      <SiteStackView />
     </div>
-    <div ref="projectsTitleRef">
-      <SiteStackTitle :visible="projectsTitle" title="My Projects"/>
+    <div>
+      <SiteStackTitle title="My Projects"/>
     </div>
       
   </div>  
@@ -42,43 +42,7 @@
 <script setup lang="ts">
 import { useWindowScroll } from '@vueuse/core';
 
+
 const {y} = useWindowScroll()
-
-const langsTitleRef = ref<HTMLElement>();
-
-const langsTitle = computed(()=>{
-  
-  if (langsTitleRef.value) {
-    const rect = langsTitleRef.value.getBoundingClientRect();
-    const computedValue = rect.y - y.value
-    return computedValue < -rect.height;
-  }
-  return false;
-})
-
-const projectsTitleRef = ref<HTMLElement>();
-
-const projectsTitle = computed(()=>{
-  
-  if (projectsTitleRef.value) {
-    const rect = projectsTitleRef.value.getBoundingClientRect();
-    const computedValue = rect.y - y.value
-    return computedValue < -rect.height;
-  }
-  return false;
-})
-
-
-const stacksRef = ref<HTMLElement>();
-
-const visibleStacks = computed(()=>{
-  
-  if (projectsTitleRef.value) {
-    const rect = projectsTitleRef.value.getBoundingClientRect();
-    const computedValue = rect.y - y.value
-    return computedValue < -rect.height;
-  }
-  return false;
-})
 
 </script>

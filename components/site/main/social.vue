@@ -13,7 +13,7 @@
         <SiteTransitionBottom :delay="`${800+index*100}ms`">
           <div class="flex p-2 gap-2 w-full cursor-pointer"  @mouseenter="item.active=true" @mouseleave="item.active=false">
             <NuxtImg class="aspect-square object-cover size-12 lg:size-24 my-auto" :src="item.image" @click="openLink(item.url)"></NuxtImg>
-            <div class="absolute blur-2xl aspect-square transition-all duration-200 size-12 lg:size-24 -z-10" :class="item.active ? 'opacity-50' :'opacity-0'" :style="{background: `#${item.color}`}"></div>
+            <div class="absolute blur-2xl aspect-square transition-all duration-500 size-12 lg:size-24 -z-10" :class="item.active ? 'opacity-50' :'opacity-0'" :style="{background: `#${item.color}`}"></div>
             <div class="flex flex-col gap-2 w-full">
               <div class="flex justify-between gap-2">
                 <h2 class="text-2xl lg:text-3xl font-semibold" @click="openLink(item.url)">
