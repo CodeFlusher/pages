@@ -18,7 +18,8 @@ const update = (): void => {
 
 const visiblePaws = 10;
 const props = defineProps({
-  paws: Number
+  paws: Number,
+  delay: Number
 })
 
 if(process.client){
@@ -30,6 +31,6 @@ if(process.client){
       }
     }
 
-  }, 500)
+  }, props.delay)
 }
 </script>

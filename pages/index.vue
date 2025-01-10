@@ -16,6 +16,8 @@
 
   <NuxtImg class="z-10 max-xl:hidden pfp-clip-path object-cover absolute left-0 top-0 h-screen aspect-[2/3]" src="/images/self.png"/>
   <SiteBackgroundPaws class="absolute"/>
+  <SiteBackgroundPaws class="absolute"/>
+  <SiteBackgroundPaws class="absolute"/>
 
   <div class="min-h-screen xl:pl-[66vh] flex bg-gradient-to-b from-green-100 to-zinc-100 dark:from-green-950 dark:to-neutral-950" >
     <SiteMainSelf/>
