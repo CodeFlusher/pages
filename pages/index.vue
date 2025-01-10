@@ -1,20 +1,18 @@
 <template>
 
-  <SiteTransitionTop>
-    <div class="fixed top-2 w-screen flex z-[1000]" v-if="y>200">
-      <div class="mx-auto rounded-full border-2 border-red-500 backdrop-blur-sm backdrop-brightness-90 bg-red-500/20 p-4 px-12 text-2xl justify-items-center text-white">
-        
-        <h1 class="font-bold max-lg:hidden">
-          THIS SITE IS CURRENTLY <b class="font-extrabold">WIP</b>
-        </h1>
-        <b class="font-extrabold lg:hidden">WIP</b>
-        <h2 class="max-lg:hidden">
-          That means that everything is a thing to change and may not work!
-        </h2>
-    
-      </div>
-    </div>
-  </SiteTransitionTop>
+  <div class="bg-transparent backdrop-blur-3xl fixed w-full h-[100px] z-[1000] text-2xl text-center text-white" :style="{
+    height: `${clamp(y/2, 200)}px`,
+    maskImage: `linear-gradient(0deg, transparent 0%, rgba(0, 0, 0, 1.0) 80%)`,
+    opacity: `${clamp(y/4, 100)}%`
+  }">
+    <h1 class="font-bold max-lg:hidden">
+      THIS SITE IS CURRENTLY <b class="font-extrabold">WIP</b>
+    </h1>
+    <b class="font-extrabold lg:hidden">WIP</b>
+    <h2 class="max-lg:hidden">
+      That means that everything is a thing to change and may not work!
+    </h2>
+  </div>
 
   <NuxtImg class="z-10 max-xl:hidden pfp-clip-path object-cover absolute left-0 top-0 h-screen aspect-[2/3]" src="/images/self.png"/>
   <SiteBackgroundPaws class="absolute"/>
@@ -41,7 +39,6 @@
 </template>
 <script setup lang="ts">
 import { useWindowScroll } from '@vueuse/core';
-
 
 const {y} = useWindowScroll()
 

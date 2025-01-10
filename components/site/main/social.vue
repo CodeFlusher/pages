@@ -8,7 +8,6 @@
     </SiteTransitionLeft>
 
     <div class="grid grid-cols-1 gap-2">
-
       <div v-for="(item, index) in social">
         <SiteTransitionBottom :delay="`${800+index*100}ms`">
           <div class="flex p-2 gap-2 w-full cursor-pointer"  @mouseenter="item.active=true" @mouseleave="item.active=false">
@@ -72,6 +71,5 @@ const social = ref<SocialCard[]>([
     active: false,
   }
 ]);
-
 
 </script>
