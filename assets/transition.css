@@ -1,4 +1,4 @@
-.card-left-enter-active, .card-left-leave-active, .card-bottom-enter-active, .card-bottom-leave-active{
+.card-left-enter-active, .card-left-leave-active, .card-bottom-enter-active, .card-bottom-leave-active,  .card-top-enter-active, .card-top-leave-active{
     transition: all 1s cubic-bezier(0.25, 1,0.25,1);
 }
 
@@ -27,8 +27,14 @@
 
 .card-bottom-leave-to{
     opacity: 0;
+    transform: translateY(5rem);
+}
+
+.card-top-enter-from, .card-top-leave-to {
+    opacity: 0;
     transform: translateY(-5rem);
 }
+
 
 .card-bottom-enter-to, .card-bottom-leave-from {
     opacity: 100%;

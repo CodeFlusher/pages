@@ -1,5 +1,5 @@
 <template>
-    <transition name="card-bottom" mode="out-in" appear :class="state ? 'opacity-100' : 'opacity-0'" @enter="state=true" @leave="state=false" :style="`transition-delay: ${delay}`">
+    <transition name="card-top" appear :class="state ? 'opacity-100' : 'opacity-0'" @enter="state=true" @leave="state=false" :style="`transition-delay: ${delay}`">
       <slot />
     </transition>
 </template>

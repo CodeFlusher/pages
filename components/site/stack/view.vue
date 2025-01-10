@@ -1,7 +1,7 @@
 <template>
 
-  <SiteTransitionBottom delay="500ms">
-    <div class="flex flex-col gap-4 h-fit" v-show="visibleTitle">
+  <SiteTransitionBottom delay="0ms">
+    <div class="flex flex-col gap-4 h-fit" v-show="visible">
       <div class="absolute left-0 p-4 lg:p-12 h-96 flex z-10 cursor-pointer" @click="decrement">
         <ArrowLeftIcon class="size-10 dark:text-neutral-300 dark:hover:text-white trantsition-colors m-auto"></ArrowLeftIcon>
       </div>
@@ -50,6 +50,10 @@ const currentItem = ref<number>(0)
 const time = ref<number>(50)
 const transitionTime = 100;
 
+const props = defineProps({
+  visible: Boolean
+})
+
 const stacks = ref<StackCard[]>([{
   name: "NuxtJS",
   description: "Modern Vue.js framework",
@@ -95,22 +99,9 @@ const decrement = (drop:boolean) => {
     }
 }
 
-const titleRef = ref<HTMLElement>();
-
-const {y} = useWindowScroll()
-
-const visibleTitle = computed(()=>{
-  if (titleRef.value) {
-    const rect = titleRef.value.getBoundingClientRect();
-    console.log(rect.top + y.value)
-    return y.value + y.value + rect.top - window.innerHeight > 0;
-  }
-  return false;
-})
-
 if(process.client){
   setInterval(() => {
-    if(!visibleTitle.value){
+    if(!props.visible){
       return;
     }
     time.value += 1
