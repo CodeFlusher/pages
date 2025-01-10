@@ -9,6 +9,10 @@
 </template>
 
 <script lang="ts" setup>
+import { useWindowScroll } from '@vueuse/core';
+
+
+const {y} = useWindowScroll()
 
 const cardRef = ref<HTMLElement>()
 
