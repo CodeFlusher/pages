@@ -8,6 +8,23 @@ export type SocialCard = {
     active: boolean,
 }
 
+export type StackMiniCard = {
+    name: string,
+    image: string,
+    url: string
+}
+
+
+export type ProjectCard = {
+    name: string,
+    description: string,
+    reason: string,
+
+    image: string,
+    url: string,
+    stack: StackMiniCard[]
+}
+
 export type StackCard = {
     name: string,
     description: string,

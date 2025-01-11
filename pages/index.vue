@@ -1,6 +1,6 @@
 <template>
 
-  <div class="bg-transparent backdrop-blur-3xl fixed w-full h-[100px] z-[1000] text-2xl text-center text-white" :style="{
+  <div class="bg-transparent backdrop-blur-3xl fixed w-full h-[100px] z-[1000] text-2xl text-center text-white pointer-events-none" :style="{
     height: `${clamp(y/2, 200)}px`,
     maskImage: `linear-gradient(0deg, transparent 0%, rgba(0, 0, 0, 1.0) 80%)`,
     opacity: `${clamp(y/4, 100)}%`
@@ -15,6 +15,7 @@
   </div>
 
   <NuxtImg class="z-10 max-xl:hidden pfp-clip-path object-cover absolute left-0 top-0 h-screen aspect-[2/3]" src="/images/self.png"/>
+
   <SiteBackgroundPaws class="absolute"/>
   <SiteBackgroundPaws class="absolute"/>
   <SiteBackgroundPaws class="absolute"/>
@@ -23,18 +24,19 @@
     <SiteMainSelf/>
   </div>
   
-  <div class="h-screen w-full overflow-hidden">
+  <div class="min-h-screen w-full overflow-hidden">
     <div>
       <SiteStackTitle class="h-fit" title="Languages and frameworks"/>
     </div>
     <div class="h-96 mb-12">
       <SiteStackView />
     </div>
-    <div>
-      <SiteStackTitle title="My Projects"/>
+    <div class="w-full">
+      <SiteStackTitle class="h-24" title="My Projects"/>
+      <SiteProjects/>
     </div>
-      
   </div>  
+
 
 </template>
 <script setup lang="ts">
