@@ -2,7 +2,7 @@
   <div ref="cardRef" >
     <SiteTransitionBottom>
       <div v-if="isVisible" class="rounded-xl grid grid-rows-2 grid-cols-1 h-full">
-        <NuxtImg :src="props?.image" alt="project image" class="w-full h-[170%] object-cover rounded-t-xl pointer-events-none" :style="{
+        <NuxtImg :src="image" alt="project image" class="w-full h-[170%] object-cover rounded-t-xl pointer-events-none" :style="{
           maskImage: `linear-gradient(0deg, transparent 40%, rgba(0, 0, 0, 1.0) 50%)`
         }"/>
         <div class="w-full flex flex-col">
