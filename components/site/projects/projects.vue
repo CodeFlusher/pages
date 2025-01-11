@@ -67,6 +67,16 @@ const projects = ref<ProjectCard[]>([
       nuxtStackCard,
       tailwindStackCard
     ]
+  },{
+    name: "Redstone Assembly Virtual Machine",
+    description: "Runtime for assembly-like code with memory",
+    url: "https://github.com/CodeFlusher/RedstoneAssemblyVirtualMachine",
+    reason: "Mainly for fun and expirience, but I wanted to make a mincraft mod that would control redstone logic with code. Maybe I will make it one day.",
+    image: "public/images/projects/ravm.webp",
+    stack: [
+      javaStackCard,
+      lombokStackCard
+    ]
   },
 ])
 
