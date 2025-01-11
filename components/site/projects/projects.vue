@@ -12,11 +12,25 @@ import type { ProjectCard } from '~/types/frontend.cards';
 import NuxtIcon from 'public/images/icons/nuxt.svg'
 import TailwindCSSIcon from 'public/images/icons/tailwindcss.svg'
 import JavaIcon from 'public/images/icons/javaicon.svg'
+import LWJGLIcon from 'public/images/icons/LWJGL.svg'
+import LombokIcon from 'public/images/icons/lombok.svg'
 
 const javaStackCard = {
   name: "Java",
   image: JavaIcon,
   url: "https://java.com/"
+}
+
+const lombokStackCard = {
+  name: "Lombok",
+  image: LombokIcon,
+  url: "https://projectlombok.org/"
+}
+
+const lwjglStackCard = {
+  name: "LWJGL",
+  image: LWJGLIcon,
+  url: "https://www.lwjgl.org/"
 }
 
 const nuxtStackCard = {
@@ -37,16 +51,18 @@ const projects = ref<ProjectCard[]>([
     description: "3 Dimentional graph builder",
     url: "https://github.com/CodeFlusher/GCalc",
     reason: "Pure mathematical interest caused me to create a tool that can make 3-d graphs in realtime",
-    image: "/images/projects/gcalc.webp",
+    image: "public/images/projects/gcalc.webp",
     stack: [
-      javaStackCard
+      javaStackCard,
+      lwjglStackCard,
+      lombokStackCard
     ]
   },{
     name: "Project Household",
     description: "Training web page for imaginary e-commerce company",
     url: "https://house.codeflusher.gay/",
     reason: "Gaining expirience. Thats it. Nothing else. Purely I just want more expirience and work for my portfolio",
-    image: "/images/projects/house.webp",
+    image: "public/images/projects/house.webp",
     stack: [
       nuxtStackCard,
       tailwindStackCard
