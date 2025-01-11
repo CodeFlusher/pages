@@ -19,9 +19,10 @@ export type ProjectCard = {
     name: string,
     description: string,
     reason: string,
-
     image: string,
     url: string,
+    source: string,
+    code: boolean
     stack: StackMiniCard[]
 }
 

@@ -2,7 +2,7 @@
   <div ref="cardRef" >
     <SiteTransitionBottom>
       <div v-if="isVisible" class="rounded-xl grid grid-rows-2 grid-cols-1 h-full">
-        <NuxtImg :src="image" alt="project image" class="w-full h-[170%] object-cover rounded-t-xl pointer-events-none" :style="{
+        <NuxtImg :src="image" alt="project image" class="w-full h-[170%] object-cover rounded-t-xl pointer-events-none object-top" :style="{
           maskImage: `linear-gradient(0deg, transparent 40%, rgba(0, 0, 0, 1.0) 50%)`
         }"/>
         <div class="w-full flex flex-col">
@@ -12,12 +12,20 @@
                 {{ props?.name }}
               </h2>
             </SiteTransitionBottom>
-            <SiteTransitionBottom delay="200ms">
-              <NuxtLink class="text-neutral-500 text-2xl cursor-pointer flex gap-2" :to="props.url">
-                <span class="mb-auto text-opacity-100 transition duration-200 hover:text-transparent bg-clip-text bg-gradient-to-r from-green-500 to-green-600"> View </span>
-                <ArrowUpRightIcon class="size-6 mt-2 mb-auto transition duration-200 hover:text-black dark:hover:text-white"/>
-              </NuxtLink>
-            </SiteTransitionBottom>
+            <div class="flex gap-4">
+              <SiteTransitionBottom delay="200ms" >
+                <NuxtLink :to="props.source" class="text-neutral-500 text-2xl cursor-pointer flex gap-2">
+                  <span class="flex mb-auto text-opacity-100 transition duration-200 hover:text-transparent bg-clip-text bg-gradient-to-r from-green-500 to-green-600"> Source </span>
+                  <CodeBracketIcon class="size-6 mt-2 mb-auto transition duration-200 hover:text-black dark:hover:text-white"/>
+                </NuxtLink>
+              </SiteTransitionBottom>
+              <SiteTransitionBottom delay="300ms">
+                <NuxtLink class="text-neutral-500 text-2xl cursor-pointer flex gap-2" :to="props.url"  v-if="!code">
+                  <span class="mb-auto text-opacity-100 transition duration-200 hover:text-transparent bg-clip-text bg-gradient-to-r from-green-500 to-green-600"> View </span>
+                  <ArrowUpRightIcon class="size-6 mt-2 mb-auto transition duration-200 hover:text-black dark:hover:text-white"/>
+                </NuxtLink>
+              </SiteTransitionBottom>
+            </div>
           </div>
           <SiteTransitionBottom delay="400ms">
             <div class="flex flex-col h-full">
@@ -54,7 +62,6 @@
 
 <script lang="ts" setup>
 import { CodeBracketIcon } from '@heroicons/vue/24/solid';
-import { ComputerDesktopIcon } from '@heroicons/vue/24/solid';
 import { ArrowUpRightIcon } from '@heroicons/vue/24/solid';
 
 import { useWindowScroll } from '@vueuse/core';

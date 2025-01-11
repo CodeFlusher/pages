@@ -1,6 +1,6 @@
 <template>
   <ul class="flex flex-col gap-12">
-    <SiteProjectsCard class=" max-lg:min-h-[48rem] lg:h-[48rem] lg:w-2/3 max-lg:mx-4 mx-auto" v-for="item in projects" :name="item.name" :description="item.description" :url="item.url" :image="item.image" :stack="item.stack" :reason="item.reason">
+    <SiteProjectsCard class=" min-h-[48rem] lg:w-2/3 max-lg:mx-4 mx-auto" v-for="item in projects" :name="item.name" :description="item.description" :url="item.url" :image="item.image" :stack="item.stack" :reason="item.reason" :source="item.source" :code="item.code">
 
     </SiteProjectsCard>
   </ul>
@@ -50,6 +50,8 @@ const projects = ref<ProjectCard[]>([
     name: "GCalc",
     description: "3 Dimentional graph builder",
     url: "https://github.com/CodeFlusher/GCalc",
+    code: true,
+    source: "https://github.com/CodeFlusher/GCalc",
     reason: "Pure mathematical interest caused me to create a tool that can make 3-d graphs in realtime",
     image: "/images/projects/gcalc.webp",
     stack: [
@@ -63,6 +65,8 @@ const projects = ref<ProjectCard[]>([
     url: "https://house.codeflusher.gay/",
     reason: "Gaining expirience. Thats it. Nothing else. Purely I just want more expirience and work for my portfolio",
     image: "/images/projects/house.webp",
+    code: false,
+    source: "https://github.com/CodeFlusher/house-sell",
     stack: [
       nuxtStackCard,
       tailwindStackCard
@@ -73,6 +77,8 @@ const projects = ref<ProjectCard[]>([
     url: "https://github.com/CodeFlusher/RedstoneAssemblyVirtualMachine",
     reason: "Mainly for fun and expirience, but I wanted to make a mincraft mod that would control redstone logic with code. Maybe I will make it one day.",
     image: "/images/projects/ravm.webp",
+    code: true,
+    source: "https://github.com/CodeFlusher/RedstoneAssemblyVirtualMachine",
     stack: [
       javaStackCard,
       lombokStackCard

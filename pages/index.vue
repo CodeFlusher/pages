@@ -31,7 +31,7 @@
     <div class="h-96 mb-12">
       <SiteStackView />
     </div>
-    <div class="w-full">
+    <div class="w-full mb-8">
       <SiteStackTitle class="h-24" title="My Projects"/>
       <SiteProjects/>
     </div>
