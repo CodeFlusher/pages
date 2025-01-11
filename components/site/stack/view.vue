@@ -133,7 +133,7 @@ const visible = computed(()=>{
   if (cardRef.value) {
     const rect = cardRef.value.getBoundingClientRect();
     const computedValue = rect.y - y.value
-    return computedValue < -rect.height;
+    return computedValue < 0;
   }
   return false;
 })

@@ -23,7 +23,7 @@ const visible = computed(()=>{
     const rect = cardRef.value.getBoundingClientRect();
     const computedValue = rect.y - y.value
     console.log(computedValue)
-    return computedValue < -rect.height;
+    return computedValue < 0;
   }
   return false;
 })
