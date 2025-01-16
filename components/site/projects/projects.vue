@@ -53,7 +53,7 @@ const projects = ref<ProjectCard[]>([
     code: true,
     source: "https://github.com/CodeFlusher/GCalc",
     reason: "Pure mathematical interest caused me to create a tool that can make 3-d graphs in realtime",
-    image: "/images/gcalc.webp",
+    image: "/images/gcalc.png",
     stack: [
       javaStackCard,
       lwjglStackCard,
@@ -64,7 +64,7 @@ const projects = ref<ProjectCard[]>([
     description: "Training web page for imaginary e-commerce company",
     url: "https://house.codeflusher.gay/",
     reason: "Gaining expirience. Thats it. Nothing else. Purely I just want more expirience and work for my portfolio",
-    image: "/images/house.webp",
+    image: "/images/house.png",
     code: false,
     source: "https://github.com/CodeFlusher/house-sell",
     stack: [
@@ -76,7 +76,7 @@ const projects = ref<ProjectCard[]>([
     description: "Runtime for assembly-like code with memory",
     url: "https://github.com/CodeFlusher/RedstoneAssemblyVirtualMachine",
     reason: "Mainly for fun and expirience, but I wanted to make a mincraft mod that would control redstone logic with code. Maybe I will make it one day.",
-    image: "/images/ravm.webp",
+    image: "/images/ravm.png",
     code: true,
     source: "https://github.com/CodeFlusher/RedstoneAssemblyVirtualMachine",
     stack: [
