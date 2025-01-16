@@ -30,7 +30,6 @@ if(process.client){
         update()
       }
     }
-
   }, props.delay)
 }
 </script>
