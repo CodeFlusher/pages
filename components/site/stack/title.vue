@@ -22,7 +22,6 @@ const visible = computed(()=>{
   if (cardRef.value) {
     const rect = cardRef.value.getBoundingClientRect();
     const computedValue = rect.y - y.value
-    console.log(computedValue)
     return computedValue < 0;
   }
   return false;

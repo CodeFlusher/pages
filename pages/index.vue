@@ -14,7 +14,7 @@
     </h2>
   </div>
 
-  <NuxtImg class="z-10 max-xl:hidden pfp-clip-path object-cover absolute left-0 top-0 h-screen aspect-[2/3]" src="/images/self.png"/>
+  <LazyNuxtImg class="z-10 max-xl:hidden pfp-clip-path object-cover absolute left-0 top-0 h-screen aspect-[2/3]" src="/images/self.png"/>
 
   <SiteBackgroundPaws class="absolute"/>
   <SiteBackgroundPaws class="absolute"/>
