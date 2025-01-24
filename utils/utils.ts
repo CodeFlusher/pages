@@ -23,3 +23,15 @@ export const clamp = (value: number, max: number = 100, min: number = 0) => {
     }
     return value
 }
+
+export const applyHorizontalScroll = (event: WheelEvent)=>{
+    if(!event.currentTarget){
+        return
+    }
+    event.preventDefault();
+    (event.currentTarget as HTMLElement).scrollBy({
+        top:0,
+        left: event.deltaY*5,
+        behavior: 'smooth'
+    })
+}

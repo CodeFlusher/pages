@@ -12,7 +12,7 @@
             <div v-if="index === currentItem" class="grid max-lg:grid-rows-2 grid-rows-1 lg:grid-cols-2 w-full h-96 absolute my-auto p-4 lg:px-24" @wheel="wheel">
               <div class="flex">
                 <div class="backdrop-blur-0 aspect-square h-full max-lg:mx-auto ml-auto cursor-pointer" @click="openLink(item.url)">
-                  <LazyNuxtImg :alt="item.name" :src="item.image" class="h-full aspect-square"></LazyNuxtImg>
+                  <NuxtImg loading="lazy" :alt="item.name" :src="item.image" class="h-full aspect-square"></NuxtImg>
                   <div class="aspect-square absolute h-[50%] rounded-full blur-3xl opacity-20 -translate-y-[150%] translate-x-1/2 " :style="{background: `#${item.color}`}"/>
                 </div>
               </div>

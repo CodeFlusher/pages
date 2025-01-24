@@ -2,7 +2,7 @@
   <div ref="cardRef" >
     <SiteTransitionBottom>
       <div v-if="isVisible" class="rounded-xl grid grid-rows-2 grid-cols-1 h-full">
-        <LazyNuxtImg :src="image" alt="project image" class="w-full h-[170%] object-cover rounded-t-xl pointer-events-none object-top" :style="{
+        <NuxtImg loading="lazy" :src="image" alt="project image" class="w-full h-[170%] object-cover rounded-t-xl pointer-events-none object-top" :style="{
           maskImage: `linear-gradient(0deg, transparent 40%, rgba(0, 0, 0, 1.0) 50%)`
         }"/>
         <div class="w-full flex flex-col">
@@ -44,11 +44,11 @@
                     Stack:
                   </h3>
                 </SiteTransitionBottom>
-                <ul class="h-32 flex gap-2">
+                <ul class="h-32 flex gap-2 max-w-full overflow-visible" @wheel="applyHorizontalScroll">
                   <SiteTransitionBottom v-for="(item, index) in stack" :delay="`${800+200*index}ms`">
-                    <div class="flex flex-col aspect-square h-32">
+                    <li class="flex flex-col aspect-square h-32">
                       <SiteStackMinicard :image="item.image" :name="item.name" :url="item.url"></SiteStackMinicard>
-                    </div>
+                    </li>
                   </SiteTransitionBottom>
                 </ul>
               </div>            
