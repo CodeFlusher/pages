@@ -20,6 +20,10 @@
   <SiteBackgroundPaws class="absolute"/>
   <SiteBackgroundPaws class="absolute"/>
 
+  <LazyNuxtImg src="/images/projects/gcalc.webp" class="hidden"></LazyNuxtImg>
+  <LazyNuxtImg src="/images/projects/house.webp" class="hidden"></LazyNuxtImg>
+  <LazyNuxtImg src="/images/projects/ravm.webp" class="hidden"></LazyNuxtImg>
+
   <div class="min-h-screen xl:pl-[66vh] flex bg-gradient-to-b from-green-100 to-zinc-100 dark:from-green-950 dark:to-neutral-950" >
     <SiteMainSelf/>
   </div>

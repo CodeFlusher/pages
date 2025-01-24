@@ -10,4 +10,9 @@
 useHead({
   title: 'CodeFlusher',
 })
+
+definePageMeta({
+  name: "CodeFlusher",
+
+})
 </script>
