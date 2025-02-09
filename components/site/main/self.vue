@@ -50,6 +50,10 @@
     <SiteMainSocial/>
   </div>
 
+  <div class="absolute bottom-8 right-8 cursor-pointer active:translate-y-2" @click="sayMeow">
+    <h1 class="text-6xl ">🐈</h1>
+  </div>
+
 </template>
 
 <style>
@@ -66,5 +70,13 @@ const activities = ref<String[]>([
   "🎮Play games"
 ])
 
+const sayMeow = () => {
+  try{
+    const audio = new Audio('audio/meow.mp3');
+    audio.play();
+  }catch(e){
+    console.error(e);
+  }
+}
 
 </script>
