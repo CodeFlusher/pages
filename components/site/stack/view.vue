@@ -18,8 +18,8 @@
               </div>
               <div class="flex">
                 <div class="max-lg:items-center max-lg:text-center justify-items-center max-lg:mx-auto lg:my-auto lg:mr-auto flex flex-col">
-                  <h3 class="bg-clip-text text-transparent bg-gradient-to-r font-extrabold text-4xl lg:text-8xl" :class="item.additional">{{item.name}}</h3>
-                  <h4 class="text-2xl">{{item.description}}</h4>
+                  <a :href="item.url" class="bg-clip-text text-transparent bg-gradient-to-r font-extrabold text-4xl lg:text-8xl" :class="item.additional">{{item.name}}</a>
+                  <a :href="item.url" class="text-2xl">{{item.description}}</a>
                 </div>
               </div>
             </div>

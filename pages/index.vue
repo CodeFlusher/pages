@@ -44,7 +44,9 @@
 </template>
 <script setup lang="ts">
 import { useWindowScroll } from '@vueuse/core';
+import {definePageMeta} from "#imports";
 
 const {y} = useWindowScroll()
+
 
 </script>

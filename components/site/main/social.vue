@@ -15,9 +15,9 @@
             <div class="absolute blur-2xl aspect-square transition-all duration-500 size-12 lg:size-24 -z-10" :class="item.active ? 'opacity-50' :'opacity-0'" :style="{background: `#${item.color}`}"></div>
             <div class="flex flex-col gap-2 w-full">
               <div class="flex justify-between gap-2">
-                <h2 class="text-2xl lg:text-3xl font-semibold" @click="openLink(item.url)">
+                <a class="text-2xl lg:text-3xl font-semibold" :href="item.url" @click="openLink(item.url)">
                   {{item.name}}
-                </h2>
+                </a>
                 <KitNavigationTab class="text-xl lg:text-3xl font-light mt-auto" @click="copyToClipborard(item.name)">
                   {{item.userId}}
                 </KitNavigationTab>
