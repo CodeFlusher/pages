@@ -1,18 +1,17 @@
 <template>
 
-  <div class="bg-transparent backdrop-blur-3xl fixed top-0 w-full h-[100px] z-[1000] text-2xl text-center text-white pointer-events-none" :style="{
-    height: `${clamp(y/2, 200)}px`,
-    maskImage: `linear-gradient(0deg, transparent 0%, rgba(0, 0, 0, 1.0) 80%)`,
-    opacity: `${clamp(y/4, 100)}%`
-  }">
-    <h1 class="font-bold text-4xl">
-      CodeFlusher
-    </h1>
-    <h2>Personal page of the developer</h2>
-    <h2 class="text-xs">
-      nya uwu meow meow
-    </h2>
-  </div>
+  <KitEffectsProgressiveBlur class="fixed z-50" direction="top" :intensity="15" :size="200" :layers-count="15" :relative-transform="clamp(-1*(100-y/8), 0, -100)">
+    <div class="z-0 mx-auto text-center">
+      <h1 class="font-bold text-4xl">
+        CodeFlusher
+      </h1>
+      <h2>Personal page of the developer</h2>
+      <h2 class="text-xs">
+        nya uwu meow meow
+      </h2>
+    </div>
+  </KitEffectsProgressiveBlur>
+
 
   <LazyNuxtImg class="z-10 max-xl:hidden pfp-clip-path object-cover absolute left-0 top-0 h-screen aspect-[2/3]" src="/images/self.png"/>
 

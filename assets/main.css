@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Gabarito:wght@400..900&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -7,6 +9,7 @@ body{
     @apply text-neutral-800 dark:text-neutral-400;
     @apply transition duration-500;
 }
+
 
 .pfp-clip-path{
     clip-path: polygon(0% 100%,75% 100%,100% 0%,  0% 0%);
