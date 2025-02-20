@@ -1,6 +1,6 @@
 <template>
 
-  <KitEffectsProgressiveBlur class="fixed z-50" direction="top" :intensity="20" :size="150" :layers-count="5" :relative-transform="clamp(-1*(100-y/8), 0, -100)">
+  <KitEffectsProgressiveBlur class="fixed z-50" direction="top" :intensity="20" :size="150" :layers-count="10" :relative-transform="clamp(-1*(100-y/8), 0, -100)">
     <div class="z-0 mx-auto text-center">
       <h1 class="font-bold text-4xl">
         CodeFlusher
