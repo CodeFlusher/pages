@@ -45,9 +45,9 @@ import {openLink, copyToClipborard} from "~/utils/utils";
 const social = ref<SocialCard[]>([
   {
     name: "Telegram",
-    description: "My work telegram account",
-    url: "https://t.me/codefwork",
-    userId: "@codefwork",
+    description: "My telegram account",
+    url: "https://t.me/codeflusher",
+    userId: "@codeflusher",
     image: Telegram,
     color: "0088CC",
     active: false,

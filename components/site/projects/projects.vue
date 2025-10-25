@@ -14,6 +14,7 @@ import TailwindCSSIcon from 'public/images/icons/tailwindcss.svg'
 import JavaIcon from 'public/images/icons/javaicon.svg'
 import LWJGLIcon from 'public/images/icons/LWJGL.svg'
 import LombokIcon from 'public/images/icons/lombok.svg'
+import ReactIcon from 'public/images/icons/react.svg'
 
 const javaStackCard = {
   name: "Java",
@@ -45,6 +46,12 @@ const tailwindStackCard = {
   url: "https://tailwindcss.com/"
 }
 
+const ReactStackCard = {
+  name: "React",
+  image: ReactIcon,
+  url: "https://reactjs.org/"
+}
+
 const projects = ref<ProjectCard[]>([
   {
     name: "GCalc",
@@ -60,13 +67,13 @@ const projects = ref<ProjectCard[]>([
       lombokStackCard
     ]
   },{
-    name: "Project Household",
+    name: "Fit4You",
     description: "Training web page for imaginary e-commerce company",
-    url: "https://house.codeflusher.gay/",
-    reason: "Gaining expirience. Thats it. Nothing else. Purely I just want more expirience and work for my portfolio",
-    image: "images/projects/house.webp",
+    url: "https://github.com/codeflusher/fit4you",
+    reason: "PROD individual tour",
+    image: "images/projects/fit4you.webp",
     code: false,
-    source: "https://github.com/CodeFlusher/house-sell",
+    source: "https://github.com/CodeFlusher/fit4you",
     stack: [
       nuxtStackCard,
       tailwindStackCard
@@ -82,6 +89,18 @@ const projects = ref<ProjectCard[]>([
     stack: [
       javaStackCard,
       lombokStackCard
+    ]
+  },{
+    name: "Moexify",
+    description: "Trading simulator based on MOEX data",
+    url: "https://t.me/moexify_bot",
+    reason: "Commisioned",
+    image: "images/projects/moexify.webp",
+    code: true,
+    source: "https://github.com/CodeFlusher/RedstoneAssemblyVirtualMachine",
+    stack: [
+      tailwindStackCard,
+      ReactStackCard
     ]
   },
 ])
